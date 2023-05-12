@@ -86,3 +86,16 @@ form label{
     transition: 0s;
     border: 2px solid #ffffff;
 }
+
+#divCargando{
+    display: none;
+}
+
+#divCargando img {
+    display: block;
+    margin: 0 auto;
+}
+
+#graveError{
+    display: none;
+}
