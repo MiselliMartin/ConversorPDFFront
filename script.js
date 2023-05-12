@@ -23,7 +23,13 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
     
     var form = event.target;
     var formData = new FormData(form);
+    var cargando = document.getElementById('divCargando')
+    var titulo2 = document.getElementById('titulo2')
     
+    
+    titulo2.style.display = 'none'
+    cargando.style.display = 'block'
+    form.style.display = 'none'
     console.log("Formulario enviado");
     console.log("Datos del formulario:", Object.fromEntries(formData));
     
@@ -40,6 +46,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
         console.log("Respuesta del servidor:", response);
 
         const blob = await response.blob();
+        cargando.style.display = 'none'
         console.log("Blob recibido:", blob);
 
         // Crear un enlace de descarga para el nuevo PDF
@@ -49,5 +56,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
         downloadLink.click();
     } catch (error) {
         console.error("Error:", error);
+        cargando.style.display = 'none'
+        document.getElementById('graveError').style.display = 'block'
     }
 });
