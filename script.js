@@ -31,7 +31,10 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
         const response = await fetch("https://conversorpdf.onrender.com/convert", {
             method: "POST",
             body: formData,
-            mode: "cors"
+            mode: "cors",
+            headers: {
+              'Access-Control-Allow-Origin': 'https://benevolent-rolypoly-23a200.netlify.app'
+            }
         });
 
         console.log("Respuesta del servidor:", response);
