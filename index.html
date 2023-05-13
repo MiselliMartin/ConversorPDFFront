@@ -12,7 +12,7 @@
     <title>Conversor Pdf</title>
 </head>
 <body>
-    <h1>Conversor PDF</h1>
+    <h1 id="titulo1">Conversor PDF</h1>
     <h2 id="titulo2">↓ Cargue los datos ↓</h2>
     <form id="uploadForm" enctype="multipart/form-data">
         <label for="excelFile">Cargue la ruta de su archivo Excel</label>
@@ -32,10 +32,13 @@
     
       <div id="divCargando">
         <img src="loading.gif" alt="Cargando..." >
+        <h2>Cargando...</h2>
       </div>
 
       <div id="graveError">
-        <img src="ups-error.gif" alt="Error" >
+        <img src="piffle-error.gif" alt="Error" >
+        <h2>No se pudo generar el nuevo PDF.</h2>
+        <h3>Lamentamos los inconvenientes.</h3>
       </div>
     
       <script src="script.js"></script>

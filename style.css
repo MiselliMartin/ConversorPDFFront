@@ -89,6 +89,7 @@ form label{
 
 #divCargando{
     display: none;
+    text-align: center;
 }
 
 #divCargando img {
@@ -98,4 +99,9 @@ form label{
 
 #graveError{
     display: none;
+    text-align: center;
+}
+
+#graveError img{
+    width: 150px;
 }

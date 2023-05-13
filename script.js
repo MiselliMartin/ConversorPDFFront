@@ -24,9 +24,10 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
     var form = event.target;
     var formData = new FormData(form);
     var cargando = document.getElementById('divCargando')
+    var titulo1 = document.getElementById('titulo1')
     var titulo2 = document.getElementById('titulo2')
     
-    
+    titulo1.style.display = 'none'
     titulo2.style.display = 'none'
     cargando.style.display = 'block'
     form.style.display = 'none'
