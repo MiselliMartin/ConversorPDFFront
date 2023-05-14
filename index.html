@@ -5,42 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/png" href="fotos/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <title>Conversor Pdf</title>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto:ital,wght@0,100;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Precio a tu PDF</title>
 </head>
 <body>
-    <h1 id="titulo1">Conversor PDF</h1>
-    <h2 id="titulo2">↓ Cargue los datos ↓</h2>
-    <form id="uploadForm" enctype="multipart/form-data">
-        <label for="excelFile">Cargue la ruta de su archivo Excel</label>
+    <h1 id="titulo1">PONELE PRECIO A TU CATÁLOGO!</h1>
+    
+    <main>
+      <h2 id="titulo2">↓ Cargue los datos ↓</h2>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <label class="vacio" for="excelFile">Cargue la ruta de su archivo Excel</label>
         <input class='archivo' type="file" name="excelFile" id="excelFile" accept=".xlsx" required>
         
-        <label for="pdfFile">Cargue la ruta de su archivo Pdf</label>
+        <label class="vacio" for="pdfFile">Cargue la ruta de su archivo Pdf</label>
         <input class='archivo' type="file" name="pdfFile" id="pdfFile" accept=".pdf" required>
 
-        <label for="ganancia">¿Cuál es el porcentaje de ganancia?</label>
+        <label class="vacio" for="ganancia">¿Cuál es el porcentaje de ganancia?</label>
         <input type="number" name="ganancia" id="ganancia" min="0" required>
 
-        <label for="newPdfName">¿Qué nombre tendrá el nuevo Pdf?</label>
+        <label class="vacio" for="newPdfName">¿Qué nombre tendrá el nuevo Pdf?</label>
         <input type="text" name="newPdfName" id="newPdfName" required>
         
         <input class='enviar oculto' type="submit" value="Convertir">
       </form>
-    
+    </main>
+  
       <div id="divCargando">
-        <img src="loading.gif" alt="Cargando..." >
+        <img src="fotos/loading.gif" alt="Cargando..." >
         <h2>Cargando...</h2>
       </div>
 
       <div id="graveError">
-        <img src="piffle-error.gif" alt="Error" >
+        <img src="fotos/piffle-error.gif" alt="Error" >
         <h2>No se pudo generar el nuevo PDF.</h2>
         <h3>Lamentamos los inconvenientes.</h3>
       </div>
+<!--
+<footer>
+        <h2>Creado por:</h2>
+        <div id="creado">
+          <div class="in">
+            <h3>Jorge Ezequiel Tricarico</h3>
+            <a href="https://github.com/JorgeTricarico" target="_blank"><img class="fotosFooter" src="fotos/github-svgrepo-com.svg" alt="GitHub logo"></a>
+            <a href="https://www.linkedin.com/in/jorge-tricarico/" target="_blank"><img class="fotosFooter" src="fotos/linkedin.svg" alt="LinkedIn logo"></a>
+          </div>
+          <div class="in"> 
+            <h3>Leandro Deferrari</h3>
+            <a href="https://github.com/leandrodeferrari" target="_blank"><img class="fotosFooter" src="fotos/github-svgrepo-com.svg" alt="GitHub logo"></a>
+            <a href="https://www.linkedin.com/in/leandrodeferrari/" target="_blank"><img class="fotosFooter" src="fotos/linkedin.svg" alt="LinkedIn logo"></a>
+          </div>
+          <div class="in">
+            <h3>Martín Miselli</h3>
+            <a href="https://github.com/MiselliMartin" target="_blank"><img class="fotosFooter" src="fotos/github-svgrepo-com.svg" alt="GitHub logo"></a>
+            <a href="https://www.linkedin.com/in/martin-miselli/" target="_blank"><img class="fotosFooter" src="fotos/linkedin.svg" alt="LinkedIn logo"></a>
+          </div>
+        </div>
+      </footer>
     
+-->
+
+<footer>
+  <h2>Creado por:</h2>
+  <div id="creado">
+    <div class="in">
+      <h3>Jorge Ezequiel Tricarico</h3>
+      <img src="fotos/Jorge.jpg" alt="">
+    </div>
+    <div class="in"> 
+      <h3>Leandro Deferrari</h3>
+      <img src="fotos/Leandro.jpg" alt="">
+    </div>
+    <div class="in">
+      <h3>Martín Miselli</h3>  
+      <img src="fotos/Martin.jpg" alt="">
+    </div>
+  </div>
+  <h3>Contactanos en: </h3>
+  <p>+54 9 11 5047-9769</p>
+</footer>
+      
       <script src="script.js"></script>
 </body>
 </html>

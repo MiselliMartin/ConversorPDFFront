@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+    box-sizing:border-box;
     font-family: 'Roboto', sans-serif;
 }
 html, body{
@@ -8,24 +8,23 @@ html, body{
 }
 
 h1{
-    font-weight: bold;
-    font-size: xx-large;
+    font-size: xxx-large;
+    font-family: 'Darumadrop One', cursive;
     display: block;
+    text-align: center;
 }
 
 body{
     margin: 0;
-    background-image: url('bgcalisma-1.jpg');
+    background-image: url('fotos/bgcalisma-1.jpg');
     background-size: cover;
     backdrop-filter: brightness(0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     overflow-x: hidden;
 }
-
-
 
 form{
     text-align: center;
@@ -41,10 +40,6 @@ form input{
     background: rgb(169, 225, 230);
 }
 
-input-button{
-    background-color: red;
-}
-
 .archivo{
     display: block;
     text-align: center;
@@ -54,10 +49,6 @@ input-button{
 form label{
     display: block;
     margin: 10px auto;
-}
-
-.oculto{
-    display: none;
 }
 
 .enviar{
@@ -87,6 +78,27 @@ form label{
     border: 2px solid #ffffff;
 }
 
+.oculto{
+    background-color: lightgray;
+}
+
+.oculto:hover{
+    transform: scale(1.0);
+    cursor: not-allowed;
+    background-color:gray;
+}
+
+.oculto:active{
+    background-color: rgba(212, 25, 0, 0.5);
+    transition: 0s;
+    border: 2px solid #ff0000;
+}
+
+main{
+    margin-bottom: 20px;
+    text-align: center
+}
+
 #divCargando{
     display: none;
     text-align: center;
@@ -105,3 +117,86 @@ form label{
 #graveError img{
     width: 150px;
 }
+
+
+.vacio::after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
+
+/*
+footer{
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+    text-align: center;
+    color: white;
+}
+
+footer h3{
+    margin: 0 auto;
+}
+
+#creado{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.in{
+    flex: 1;
+}
+
+.fotosFooter{
+    width: 35px;
+    padding: 2px;
+}
+
+.fotosFooter:hover{
+    transform: scale(1.2);
+}
+*/
+footer{
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.9);
+    text-align: center;
+    color: white;
+}
+
+footer h2{
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+#creado{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.in{
+    flex: 1;
+}
+
+.in h3{
+    display: block;
+}
+
+.in img{
+    height: 100px;
+    width: 100px;
+    border-radius: 30px;
+}
+
+.in img:hover{
+    transform: scale(1.1);
+}
+
+footer h3, p{
+    display: inline;
+}
+

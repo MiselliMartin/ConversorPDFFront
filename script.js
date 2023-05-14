@@ -2,6 +2,19 @@
 const uploadForm = document.getElementById('uploadForm');
 const inputs = uploadForm.querySelectorAll('input');
 const submitButton = uploadForm.querySelector('.enviar');
+const labels = document.querySelectorAll('label');
+
+inputs.forEach((input, index) => {
+  input.addEventListener('input', () => {
+    const inputValue = input.value.trim();
+    
+    if (inputValue !== '') {
+      labels[index].classList.remove('vacio');
+    } else {
+      labels[index].classList.add('vacio');
+    }
+  });
+});
 
 // Agrega un evento 'input' a cada campo de entrada
 inputs.forEach(input => {
