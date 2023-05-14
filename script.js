@@ -39,9 +39,6 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
             method: "POST",
             body: formData,
             mode: "cors",
-            headers: {
-              'Access-Control-Allow-Origin': 'https://benevolent-rolypoly-23a200.netlify.app'
-            }
         });
 
         console.log("Respuesta del servidor:", response);
