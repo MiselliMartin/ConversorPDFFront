@@ -51,7 +51,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
         const response = await fetch("https://conversorpdf.onrender.com/convert", {
             method: "POST",
             body: formData,
-            mode: "cors",
+            mode: "no-cors",
         });
 
         console.log("Respuesta del servidor:", response);
