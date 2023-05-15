@@ -51,6 +51,18 @@ form label{
     margin: 10px auto;
 }
 
+.input-container {
+    position: relative;
+}
+  
+.input-container::after {
+    content: '%';
+    position: absolute;
+    top: 50%;
+    right: 35px; /* Ajusta el valor según sea necesario */
+    transform: translateY(-50%);
+}
+
 .enviar{
     width: 40%;
     padding: 15px 0;

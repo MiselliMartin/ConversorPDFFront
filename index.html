@@ -17,14 +17,16 @@
     <main>
       <h2 id="titulo2">↓ Cargue los datos ↓</h2>
       <form id="uploadForm" enctype="multipart/form-data">
-        <label class="vacio" for="excelFile">Cargue la ruta de su archivo Excel</label>
+        <label class="vacio" for="excelFile">Cargue la lista de precios</label>
         <input class='archivo' type="file" name="excelFile" id="excelFile" accept=".xlsx, .xls" required>
         
-        <label class="vacio" for="pdfFile">Cargue la ruta de su archivo Pdf</label>
+        <label class="vacio" for="pdfFile">Cargue el catálogo de productos</label>
         <input class='archivo' type="file" name="pdfFile" id="pdfFile" accept=".pdf" required>
 
         <label class="vacio" for="ganancia">¿Cuál es el porcentaje de ganancia?</label>
-        <input type="number" name="ganancia" id="ganancia" min="0" required>
+        <div class="input-container">
+          <input type="number" name="ganancia" id="ganancia" min="0" required>
+        </div>
 
         <label class="vacio" for="newPdfName">¿Qué nombre tendrá el nuevo Pdf?</label>
         <input type="text" name="newPdfName" id="newPdfName" required>
