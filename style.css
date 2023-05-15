@@ -104,6 +104,11 @@ main{
     text-align: center;
 }
 
+#divCargando h2{
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
 #divCargando img {
     display: block;
     margin: 0 auto;
