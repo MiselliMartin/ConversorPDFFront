@@ -205,3 +205,9 @@ footer h2{
 footer h3, p{
     display: inline;
 }
+
+@media (max-width: 350px) {
+    form{
+        padding: 0 0;
+    }
+}
