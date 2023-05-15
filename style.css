@@ -202,6 +202,11 @@ footer h2{
     transform: scale(1.1);
 }
 
+.in img:active{
+    border: 2px solid #ffffff;
+    transform: scale(1.1);
+}
+
 footer h3, p{
     display: inline;
 }
