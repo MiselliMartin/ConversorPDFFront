@@ -32,6 +32,7 @@ form{
     border-radius: 20px;
     padding: 20px 20px;
     font-weight: bold;
+    font-size: x-large;
 }
 form input{
     display: block;
@@ -59,7 +60,7 @@ form label{
     content: '%';
     position: absolute;
     top: 50%;
-    right: 35px; /* Ajusta el valor según sea necesario */
+    right: 80px; /* Ajusta el valor según sea necesario */
     transform: translateY(-50%);
 }
 
