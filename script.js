@@ -39,6 +39,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
     var cargando = document.getElementById('divCargando')
     var titulo1 = document.getElementById('titulo1')
     var titulo2 = document.getElementById('titulo2')
+    var divFin = document.getElementById('fin')
     
     titulo1.style.display = 'none'
     titulo2.style.display = 'none'
@@ -48,11 +49,11 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
     console.log("Datos del formulario:", Object.fromEntries(formData));
     
     try {
-        const response = await fetch("https://conversorpdf.onrender.com/convert", {
-            method: "POST",
-            body: formData,
-            mode: "cors",
-        });
+        const response = await fetch("http://127.0.0.1:5000/convert", {
+          method: "POST",
+          body: formData,
+          mode: "cors",
+      });
 
         console.log("Respuesta del servidor:", response);
 
@@ -64,6 +65,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
         var downloadLink = document.createElement("a");
         downloadLink.href = URL.createObjectURL(blob);
         downloadLink.download = form.elements.newPdfName.value + ".pdf";
+        divFin.style.display = 'block'
         downloadLink.click();
     } catch (error) {
         console.error("Error:", error);
