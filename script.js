@@ -48,7 +48,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
     console.log("Formulario enviado");
     console.log("Datos del formulario:", Object.fromEntries(formData));
  
-    fetch('http://localhost:5000/')
+    fetch('https://conversorpdf.onrender.com/')
   .then(response => response.text())
   .then(data => {
     console.log(data); // Imprime la respuesta del servidor en la consola
@@ -56,7 +56,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
   .catch(error => {
     console.error('Error:', error);
   });
-  
+
     /*
     try {
         const response = await fetch("https://conversorpdf.onrender.com/convert", {
