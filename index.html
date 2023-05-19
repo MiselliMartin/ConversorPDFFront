@@ -17,11 +17,18 @@
     <main>
       <h2 id="titulo2">↓ Cargue los datos ↓</h2>
       <form id="uploadForm" enctype="multipart/form-data">
-        <label class="vacio" for="excelFile">Cargue la lista de precios</label>
-        <input class='archivo' type="file" name="excelFile" id="excelFile" accept=".xlsx, .xls" required>
-        
+        <fieldset>
+          <legend>Seleccione el nombre de su proveedor</legend>
+          <select>
+              <option>La bombachita</option>
+          </select>
+      </fieldset>
+
         <label class="vacio" for="pdfFile">Cargue el catálogo de productos</label>
         <input class='archivo' type="file" name="pdfFile" id="pdfFile" accept=".pdf" required>
+
+        <label class="vacio" for="excelFile">Cargue la lista de precios</label>
+        <input class='archivo' type="file" name="excelFile" id="excelFile" accept=".xlsx, .xls" required>
 
         <label class="vacio" for="ganancia">¿Cuál es el porcentaje de ganancia?</label>
         <div class="input-container">
@@ -45,6 +52,7 @@
         <img src="fotos/piffle-error.gif" alt="Error" >
         <h2>No se pudo generar el nuevo PDF.</h2>
         <h3>Lamentamos los inconvenientes.</h3>
+        <a href="index.html"><button>Intentar de nuevo</button></a>
       </div>
 
       <div id="fin">
@@ -94,6 +102,6 @@
   <p>+54 9 11 5047-9769</p>
 </footer>
       
-      <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
