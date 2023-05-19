@@ -47,7 +47,17 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
     form.style.display = 'none'
     console.log("Formulario enviado");
     console.log("Datos del formulario:", Object.fromEntries(formData));
-    
+ 
+    fetch('http://localhost:5000/')
+  .then(response => response.text())
+  .then(data => {
+    console.log(data); // Imprime la respuesta del servidor en la consola
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+  
+    /*
     try {
         const response = await fetch("https://conversorpdf.onrender.com/convert", {
           method: "POST",
@@ -72,4 +82,5 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
         cargando.style.display = 'none'
         document.getElementById('graveError').style.display = 'block'
     }
+    */
 });
